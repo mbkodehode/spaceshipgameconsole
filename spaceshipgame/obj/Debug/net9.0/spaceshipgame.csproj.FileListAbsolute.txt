@@ -1,0 +1,14 @@
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\bin\Debug\net9.0\spaceshipgame.exe
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\bin\Debug\net9.0\spaceshipgame.deps.json
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\bin\Debug\net9.0\spaceshipgame.runtimeconfig.json
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\bin\Debug\net9.0\spaceshipgame.dll
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\bin\Debug\net9.0\spaceshipgame.pdb
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.AssemblyInfoInputs.cache
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.AssemblyInfo.cs
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.csproj.CoreCompileInputs.cache
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.dll
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\refint\spaceshipgame.dll
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.pdb
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.genruntimeconfig.cache
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\ref\spaceshipgame.dll
