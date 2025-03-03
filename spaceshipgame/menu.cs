@@ -2,7 +2,7 @@ namespace spaceshipgame
 {
     public static class Menu
     {
-        public static SpaceShip currentShip { get; set; }
+        public static SpaceShip? CurrentShip { get; set; }
         public static bool showGameMenu = false;
         public static bool showmenue = true;
         
@@ -53,7 +53,15 @@ namespace spaceshipgame
                     setDestinationPlanet();
                     break;
                 case ConsoleKey.D3:
-                    ShowFuelGauge(Menu.currentShip);
+                    Console.Clear();
+                    if (CurrentShip != null)
+                    {
+                    ShowFuelGauge(CurrentShip);
+                    }
+                    else 
+                    {
+                        System.Console.WriteLine("you do not have a ship yet");
+                    }
                     break;
                 case ConsoleKey.D4:
                     refuelSpaceship();
@@ -69,7 +77,7 @@ namespace spaceshipgame
                     break;
                 case ConsoleKey.D8:
                     shutDownControlSystem();
-                    
+                    break;
                     
                 default:
                     GameMenu();
@@ -91,38 +99,59 @@ namespace spaceshipgame
             Console.Clear();
             System.Console.WriteLine("Lets build your new spaceship");
             System.Console.WriteLine("Please enter the name of your new spaceship");
-            string name = Console.ReadLine();
+            string? name = Console.ReadLine();
             System.Console.WriteLine("Please enter the ship class of your new spaceship");
-            string shipclass = Console.ReadLine();
+            string? shipclass = Console.ReadLine();
             System.Console.WriteLine("Please enter the fuel capacity of your new spaceship");
-            int fuelcapacity = Convert.ToInt32(Console.ReadLine());
+            int? fuelcapacity = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Please enter the speed of your new spaceship");
-            int speed = Convert.ToInt32(Console.ReadLine());
+            int? speed = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Please enter the fuel usage of your new spaceship");
-            int fuelusage = Convert.ToInt32(Console.ReadLine());
+            int? fuelusage = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine("Please enter the crew capacity of your new spaceship");
-            int crewcapasity = Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine("Please enter the crew of your new spaceship");
+            int? crewcapasity = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine("Please enter number of crew of your new spaceship");
             int crew = Convert.ToInt32(Console.ReadLine());
             Crew crew1 = new Crew();
-            SpaceShip spaceship = new SpaceShip(name, shipclass, fuelcapacity, speed, fuelusage, crewcapasity, crew, "Earth");
+            SpaceShip spaceship = new SpaceShip(name, shipclass, (int)fuelcapacity, (int)speed, (int)fuelusage, (int)crewcapasity, crew, "Earth", crew1);
             System.Console.WriteLine($"Your new spaceship is now called {spaceship.Name} and has a crew capacity of {spaceship.CrewCapasity} and a crew of {spaceship.Crew} people.");
         }
         public static void setDestinationPlanet()
         {
-            Console.WriteLine("Calculating fuel cost...");
-            
-            // Assume distance is a known value for the sake of this example
-            int distanceToPlanet = 500; // Example distance in some unit
-            int fuelUsagePerUnit = 10; // Example fuel usage per unit distance
-            
-            int CalculateFuelCost(int distance, int fuelUsage)
-            {
-                return distance * fuelUsage;
-            }
+                Console.Clear();
+                System.Console.WriteLine("Please enter the name of the planet you want to travel to");
+                List<Planet> availablePlanets = Planet.GetAvailablePlanets();
+                foreach (Planet p in availablePlanets)
+                {
+                    System.Console.WriteLine($"{p.Name}");
+                }
+                
+                string destinationPlanet = Console.ReadLine();
+                Console.WriteLine("Calculating fuel cost...");
+                
+                // Assume distance is a known value for the sake of this example
+                int distanceToPlanet = 500; // Example distance in some unit
+                int fuelUsagePerUnit = 10; // Example fuel usage per unit distance
+                
+                int CalculateFuelCost(int distance, int fuelUsage)
+                {
+                    return distance * fuelUsage;
+                }
 
-            int fuelCost = CalculateFuelCost(distanceToPlanet, fuelUsagePerUnit);
-            Console.WriteLine($"The fuel cost for traveling to the planet is: {fuelCost}");
+                int fuelCost = CalculateFuelCost(distanceToPlanet, fuelUsagePerUnit);
+                Console.WriteLine($"The fuel cost for traveling to the planet is: {fuelCost}");
+
+                if (CurrentShip.CurrentFuel >= fuelCost)
+                {
+                    System.Console.WriteLine("ship has insufficient fuel for this trip, please refuel first");
+                    
+                }
+                else
+                {
+                    CurrentShip.CurrentFuel -= fuelCost;
+                    CurrentShip.OriginPlanet = destinationPlanet;
+                    System.Console.WriteLine($"You have successfully traveled to the planet {destinationPlanet}");
+                }
         }
         private static void ShowFuelGauge(SpaceShip currentShip)
         {
