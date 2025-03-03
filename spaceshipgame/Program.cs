@@ -13,7 +13,7 @@ namespace spaceshipgame
         
             Console.WriteLine("Hello World");
 
-            SpaceShip starterShip = new SpaceShip("Nebuchadnezzar", "Hauler", 10000, 100, 10, 10, 1, "Earth");
+            SpaceShip starterShip = new SpaceShip("Nebuchadnezzar", "Hauler", 10000, 100, 10, 10, 1, "Earth" , new Crew());
             Crew startercrew = new Crew();
         }
     }

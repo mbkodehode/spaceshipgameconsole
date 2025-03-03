@@ -12,3 +12,4 @@ C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\space
 C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.pdb
 C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.genruntimeconfig.cache
 C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\ref\spaceshipgame.dll
+C:\Users\Instruktor.P-02464\Documents\Kurs 1811\uke12\spaceshipgameconsole\spaceshipgame\obj\Debug\net9.0\spaceshipgame.sourcelink.json
